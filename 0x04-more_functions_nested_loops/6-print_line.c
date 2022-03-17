@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
- * print_line - print 0-15  10xand end with new line.
- *
- * @n:user input of number of line
- * Return: 0-15 10x and new line after
+ *  print_line - Print line dependent on the integer n.
+ * @n : The number of '_' characters to use
+ * Return: Void.
  */
-
 void print_line(int n)
 {
-if (n > 0)
-{
-int i;
-for (i = 0; i <= n; i++)
-{
-_putchar('_');
-}
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		_putchar('_');
+	}
+	_putchar('\n');
 }
 
-_putchar('\n');
-}
