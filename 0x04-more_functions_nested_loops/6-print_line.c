@@ -3,17 +3,20 @@
 /**
  * print_line - print 0-15  10xand end with new line.
  *
- * @n: The number of '_' characters to use
- * Return: Void.
+ * @n:user input of number of line
+ * Return: 0-15 10x and new line after
  */
+
 void print_line(int n)
 {
-	int i;
+if (n > 0)
+{
+int i;
+for (i = 0; i <= n; i++)
+{
+_putchar('_');
+}
+}
 
-	for (i = 0; i < n; i++)
-	{
-		_putchar('_');
-	
-	_putchar('\n');
-}}
-
+_putchar('\n');
+}
