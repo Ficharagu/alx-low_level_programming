@@ -3,22 +3,26 @@
 /**
  * puts2 - prints one char out of 2
  * @str: type
+ * return-void
  *
  */
 
 void puts2(char *str)
 {
-	int i, j = 0;
 
-	while (str[i] != '\0')
-	{
-		i++;
-	}
+while (*str != '\0')
+{
+_putchar(*str);
+str++;
+if (*str == '\0')
+{
+break;
+}
+else
+{
+str++;
+}
 
-	while (j < i)
-	{
-		_putchar(str[j]);
-		j = j + 2;
-	}
-	_putchar('\n');
+}
+_putchar('\n');
 }
