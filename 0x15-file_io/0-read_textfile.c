@@ -1,18 +1,22 @@
-/*
- * File: 0-read_textfile.c
- */
-
 #include "main.h"
-#include <stdlib.h>
+
+/*Library for open system call man open*/
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+/*Library for close and write system call man close*/
+#include <unistd.h>
 
 /**
- * read_textfile - Reads a text file and prints it to POSIX stdout.
- * @filename: A pointer to the name of the file.
- * @letters: The number of letters the
- *           function should read and print.
+ * read_textfile - Function that reads a text file and prints it
  *
- * Return: If the function fails or filename is NULL - 0.
- *         O/w - the actual number of bytes the function can read and print.
+ * @filename: The pathname of file to read
+ * @letters: number of letters it should read and print
+ *
+ * Description: A function that reads a text file and prints it to
+ * the POSIX standard output.
+ * Return: Number of letters it could read and print, otherwise 0
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -41,3 +45,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	return (w);
 }
+
